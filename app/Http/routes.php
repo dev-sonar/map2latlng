@@ -11,6 +11,7 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
+$app->get('getKey', ['as' => 'getKey','uses' => 'MainController@getKey']);
+$app->get('get', ['as' => 'getData','uses' => 'MainController@getData']);
+$app->get('submit', ['as' => 'submit','uses' => 'MainController@submit']);
+$app->get('/', ['as' => 'top','uses' => 'MainController@index']);
